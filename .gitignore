@@ -18,3 +18,14 @@ CPP_Graph/CPP_Graph/Debug/vc142.idb
 CPP_Graph/CPP_Graph/Debug/vc142.pdb
 CPP_Graph/Debug/CPP_Graph.ilk
 CPP_Graph/Debug/CPP_Graph.pdb
+*.tlog
+*.user
+*.recipe
+*.log
+*.obj
+*.idb
+*.pdb
+*.ilk
+*.db
+Study/CPP_Graph/.vs/CPP_Graph/v16/.suo
+*.ipch
