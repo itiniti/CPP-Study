@@ -5,7 +5,7 @@ typedef struct student {
 	int score;
 };
 
-//student ¹è¿­ÀÇ ÃÖ¼Ò°ª
+//student ë°°ì—´ì˜ ìµœì†Œê°’
 int GetMinScore(student* students, int n) {
 	int Index = 0;
 	for (int i = 0; i < n; i++)
@@ -17,7 +17,7 @@ int GetMinScore(student* students, int n) {
 	return students[Index].score;
 }
 
-//student ¹è¿­ÀÇ ÃÖ´ë°ª
+//student ë°°ì—´ì˜ ìµœëŒ€ê°’
 int GetMaxScore(student* students, int n) {
 	int Index = 0;
 	for (int i = 0; i < n; i++)
@@ -29,7 +29,7 @@ int GetMaxScore(student* students, int n) {
 	return students[Index].score;
 }
 
-//students ¹è¿­ÀÇ Æò±Õ ±¸ÇÏ±â
+//students ë°°ì—´ì˜ í‰ê·  êµ¬í•˜ê¸°
 int GetAverage(student* students, int n) {
 	int sum=0;
 	for (int i=0;i<n;i++)
@@ -39,22 +39,28 @@ int GetAverage(student* students, int n) {
 	return average;
 }
 
+//students ë°°ì—´ì˜ í¬ê¸° êµ¬í•˜ê¸°
+int GetSize(student* students, int n){
+	
+}
+
 int main(void) {
-	//ÃÑ ÇĞ»ı ¼ö ÀÔ·Â ¹Ş±â
+	//ì´ í•™ìƒ ìˆ˜ ì…ë ¥ ë°›ê¸°
 	int nStudentsCount = 0;
-	cout << "ÃÑ ÇĞ»ı ¼ö¸¦ ÀÔ·ÂÇØ ÁÖ¼¼¿ä : ";
+	cout << "ì´ í•™ìƒ ìˆ˜ë¥¼ ì…ë ¥í•´ ì£¼ì„¸ìš” : ";
 	cin >> nStudentsCount;
 
-	//ÃÑ ÇĞ»ı ¼ö¸¸Å­ ¹è¿­ µ¿Àû ÇÒ´ç
+	//ì´ í•™ìƒ ìˆ˜ë§Œí¼ ë°°ì—´ ë™ì  í• ë‹¹
 	student* Students = new student[nStudentsCount]; 
 
-	//ÇĞ»ı ¼ö ¸¸Å­ ÀÚ·á ÀÔ·Â ¹Ş±â.
+	//í•™ìƒ ìˆ˜ ë§Œí¼ ìë£Œ ì…ë ¥ ë°›ê¸°.
 	for (int i = 0; i < nStudentsCount; i++)
 	{
 		
-		cout << i + 1 << "¹øÂ° ÇĞ»ıÀÇ Á¡¼ö : ";
+		cout << i + 1 << "ë²ˆì§¸ í•™ìƒì˜ ì ìˆ˜ : ";
 		cin >> Students[i].score;
 	}
 	cout << "------------------------------------------------------------"<<endl;
-	cout << "ÃÖÀú Á¡¼ö : " << GetMinScore(Students, nStudentsCount) << endl << "ÃÖ´ë Á¡¼ö : " << GetMaxScore(Students, nStudentsCount) << endl << "Æò±Õ Á¡¼ö : " << GetAverage(Students, nStudentsCount) << endl;
+	cout << "ìµœì € ì ìˆ˜ : " << GetMinScore(Students, nStudentsCount) << endl << "ìµœëŒ€ ì ìˆ˜ : " << GetMaxScore(Students, nStudentsCount) << endl << "í‰ê·  ì ìˆ˜ : " << GetAverage(Students, nStudentsCount) << endl;
+
 }
